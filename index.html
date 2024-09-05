@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Tracker</h1>
+        
+        <div class="overview">
+            <div class="card income">
+                <h3>Total Income</h3>
+                <p id="incomeAmount">₹0.00</p>
+            </div>
+            <div class="card expense">
+                <h3>Total Expenses</h3>
+                <p id="expenseAmount">₹0.00</p>
+            </div>
+            <div class="card balance">
+                <h3>Balance</h3>
+                <p id="balanceAmount">₹0.00</p>
+            </div>
+            <div class="card savings">
+                <h3>Savings Goal</h3>
+                <p id="savingsGoal">₹0.00</p>
+                <input type="number" id="goalInput" placeholder="Set Goal" />
+                <br>
+                <br>
+
+                <button id="setGoal">Set Goal</button>
+            </div>
+        </div>
+
+        <form id="transactionForm">
+            <input type="text" id="description" placeholder="Description" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="type" required>
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+            <select id="category" required>
+                <option value="salary">Salary</option>
+                <option value="bills">Bills</option>
+                <option value="groceries">Groceries</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="others">Others</option>
+            </select>
+            <button type="submit">Add Transaction</button>
+        </form>
+
+        <h2>Transaction History</h2>
+        <ul id="transactionList"></ul>
+        <button id="clearHistory">Clear Transaction History</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
